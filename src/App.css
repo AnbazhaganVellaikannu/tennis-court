@@ -1,0 +1,387 @@
+:root {
+  --green: #1f7a3f;
+  --green-dark: #145c2c;
+  --green-light: #e6f4ea;
+  --yellow: #d7e02b;
+  --ink: #1a1d1f;
+  --muted: #6b7280;
+  --border: #e2e5e9;
+  --bg: #f7f8fa;
+  --danger: #c0392b;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+.app-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.app-header h1 {
+  font-size: 1.4rem;
+  margin: 0;
+  margin-right: auto;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tab {
+  border: 1px solid var(--border);
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+.tab.active {
+  background: var(--green);
+  border-color: var(--green);
+  color: white;
+}
+
+.account-field {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.account-field span {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.auth-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-form {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-form h2 {
+  margin: 0;
+}
+
+.auth-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+}
+
+.auth-form input {
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.court-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.court-card {
+  text-align: left;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+
+.court-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+.court-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.court-card-header h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+}
+
+.badge {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.badge-indoor {
+  background: #e8eefc;
+  color: #2b4fb0;
+}
+
+.badge-outdoor {
+  background: var(--green-light);
+  color: var(--green-dark);
+}
+
+.court-address {
+  margin: 0 0 0.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.court-meta {
+  display: flex;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.court-hours {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: var(--green-dark);
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.court-detail h2 {
+  margin-bottom: 0.25rem;
+}
+
+.date-picker {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  margin: 1.25rem 0;
+}
+
+.date-picker input {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.confirmation-banner {
+  background: var(--green-light);
+  color: var(--green-dark);
+  border: 1px solid var(--green);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.slot-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.6rem;
+}
+
+.slot-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.6rem 0.4rem;
+  border-radius: 8px;
+  border: 1px solid var(--green);
+  background: white;
+  color: var(--green-dark);
+  cursor: pointer;
+}
+
+.slot-time {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.slot-availability {
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.slot-button:hover:not(:disabled) {
+  background: var(--green-light);
+}
+
+.slot-button:disabled {
+  cursor: not-allowed;
+  border-color: var(--border);
+  color: var(--muted);
+  background: #f2f3f5;
+}
+
+.slot-button.slot-booked {
+  color: var(--danger);
+  border-color: #f3d3ce;
+  background: #fdf2f0;
+}
+
+.slot-button.slot-booked .slot-availability {
+  color: var(--danger);
+}
+
+.slot-button.slot-pending {
+  background: var(--yellow);
+  border-color: var(--yellow);
+  color: var(--ink);
+}
+
+.slot-button.slot-pending .slot-availability {
+  color: var(--ink);
+}
+
+.booking-form {
+  margin-top: 1.25rem;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  max-width: 420px;
+}
+
+.booking-form h4 {
+  margin-top: 0;
+}
+
+.booking-error {
+  color: var(--danger);
+  font-size: 0.85rem;
+  margin: -0.5rem 0 1rem;
+}
+
+.booking-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.booking-form input {
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.booking-form-actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.primary-button {
+  background: var(--green);
+  color: white;
+  border: none;
+  padding: 0.55rem 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.primary-button:hover {
+  background: var(--green-dark);
+}
+
+.secondary-button {
+  background: white;
+  border: 1px solid var(--border);
+  padding: 0.55rem 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+
+.secondary-button:hover {
+  background: #f2f3f5;
+}
+
+.booking-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.booking-item {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.booking-item-meta {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+}
+
+.booking-item.booking-past {
+  opacity: 0.6;
+}
+
+.empty-state {
+  color: var(--muted);
+}

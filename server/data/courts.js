@@ -1,0 +1,38 @@
+export const COURTS = [
+  {
+    id: 'riverside-park',
+    name: 'Riverside Park Tennis Courts',
+    address: '120 Riverside Dr',
+    surface: 'Hard',
+    indoor: false,
+    courtsCount: 4,
+    pricePerHour: 12,
+  },
+  {
+    id: 'oakwood-club',
+    name: 'Oakwood Community Club',
+    address: '48 Oakwood Ave',
+    surface: 'Clay',
+    indoor: false,
+    courtsCount: 3,
+    pricePerHour: 18,
+  },
+  {
+    id: 'central-sports-centre',
+    name: 'Central Sports Centre',
+    address: '9 High Street',
+    surface: 'Hard',
+    indoor: true,
+    courtsCount: 2,
+    pricePerHour: 22,
+  },
+  {
+    id: 'greenfield-courts',
+    name: 'Greenfield Tennis Courts',
+    address: '210 Greenfield Rd',
+    surface: 'Grass',
+    indoor: false,
+    courtsCount: 2,
+    pricePerHour: 15,
+  },
+]
